@@ -15,6 +15,7 @@ export type PersonalityCategory = 'analyst' | 'diplomat' | 'sentinel' | 'explore
 export interface DimensionScore {
   dimension: Dimension;
   letter: string;               // 'E' 或 'I'
+  preference?: string;          // 偏好字母（用于显示）
   score: number;                // 0-100 分数
   percentage: number;           // 百分比
   description: string;          // 维度描述
@@ -35,12 +36,12 @@ export interface TestResult {
 export interface Career {
   title: string;               // 职业名称
   suitability: 'high' | 'medium' | 'low';
-  reason: string;              // 适合原因
+  reason?: string;             // 适合原因（可选）
 }
 
 // 成长建议
 export interface GrowthAdvice {
-  area: string;                // 成长领域
+  area?: string;               // 成长领域（可选）
   advice: string;              // 具体建议
   priority: 'high' | 'medium' | 'low';
 }

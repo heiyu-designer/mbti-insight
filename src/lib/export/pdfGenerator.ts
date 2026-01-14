@@ -14,7 +14,6 @@ export async function generatePDF(result: TestResult, profile: PersonalityProfil
   });
 
   const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
 
   // 创建临时容器用于渲染PDF内容
   const container = document.createElement('div');

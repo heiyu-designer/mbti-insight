@@ -68,6 +68,7 @@ export function calculateDimensionScores(
     return {
       dimension,
       letter,
+      preference: letter,          // 添加 preference 字段用于显示
       score: Math.round(score),
       percentage: Math.round(percentage * 10) / 10, // 保留一位小数
       description: getDimensionDescription(dimension, letter),
